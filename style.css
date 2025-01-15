@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Delius", serif;
+  transition: all 0.3s ease-in-out;
 }
 
 :root {
@@ -73,6 +74,10 @@ nav {
   > #contact-us:hover {
     background-color: var(--darker-button-color);
   }
+}
+
+.menu-toggle {
+  display: none;
 }
 
 #floating {
@@ -160,87 +165,121 @@ footer h4 {
 }
 
 /* Mobile Styles */
+/* Mobile Styles for Navigation */
 @media screen and (max-width: 768px) {
   nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3vh 5vw;
-  }
-
-  .icon {
-    margin: 0;
-  }
-
-  #floating {
-    display: block;
-    position: fixed;
-    right: 1.3rem;
-    bottom: 1.3rem;
-    border-radius: 5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 4px;
+    padding: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   nav .links {
-    max-width: 70lvw;
-    width: 70lvw;
-    margin-bottom: 2vh;
-    gap: 1.2rem;
-    justify-content: space-evenly;
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
 
-  nav .link {
-    margin: 1rem 0;
+  nav .links a {
+    padding: 10px;
     text-align: center;
-    text-wrap: nowrap;
+    width: 100%;
   }
 
   nav #contact-us {
     display: none;
   }
 
-  #contact-us {
-    width: 100%;
-    font-size: 1rem;
-    margin-left: 0;
-    margin-top: 1rem;
-    justify-content: center;
+  nav .menu-toggle {
+    display: block;
+    cursor: pointer;
   }
 
-  footer {
-    padding: 3vh 5vw;
+  nav .menu-toggle span {
+    font-size: 2rem;
   }
 
-  footer .row {
-    flex-direction: column;
-    align-items: flex-start;
+  nav.active .links {
+    display: flex;
   }
 
-  footer .social-medias {
-    gap: 1rem;
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-
-  footer .footer-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  footer .links,
-  footer .contact-info {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  footer .copyright {
-    font-size: 12px;
-    margin-top: 2vh;
+  #floating {
+    display: none;
   }
 }
 
+/* HOME PAGE START */
+
+#hero {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin: 4vh 0vh;
+
+  > .moto {
+    font-family: fantasy;
+    font-size: 4rem;
+  }
+  > .facts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 5vw;
+    margin-top: 2rem;
+
+    > .fact {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+
+  > #cta {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 1px solid var(--boder-color);
+    background: var(--button-color);
+  }
+
+  > #cta:hover {
+    background: var(--darker-button-color);
+    box-shadow: gray 2px 5px;
+  }
+}
+
+/* Mobile Styles for Home Page */
+@media screen and (max-width: 768px) {
+  #hero {
+    margin: 2vh 0vh;
+
+    > .moto {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    > .facts {
+      flex-direction: column;
+      padding: 0px 2vw;
+      margin-top: 1rem;
+
+      > .fact {
+        margin-bottom: 1rem;
+      }
+    }
+
+    > #cta {
+      font-size: 1.2rem;
+      padding: 8px;
+    }
+  }
+}
