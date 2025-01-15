@@ -238,13 +238,9 @@ footer h4 {
     margin-bottom: 1rem;
   }
 
-  footer .links li,
-  footer .contact-info li {
-    text-align: center;
-  }
-
   footer .copyright {
     font-size: 12px;
     margin-top: 2vh;
   }
 }
+
