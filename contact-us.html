@@ -29,18 +29,65 @@
   <body>
     <nav>
       <a class="icon" href="/">I-Tech</a>
+      <div class="menu-toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </div>
       <div class="links">
-        <a href="#" class="link here">Home</a>
+        <a href="#" class="link">Home</a>
         <a href="#" class="link">Our Services</a>
         <a href="#" class="link">Personalized Plans</a>
       </div>
-      <button id="contact-us">
-        <span class="material-symbols-outlined"> call </span>Contact Us
+      <button class="contact-us here" id="contact-us">
+        <span class="material-symbols-outlined">call</span>Contact Us
       </button>
     </nav>
-    <button id="floating">
+    <button class="contact-us here" id="floating">
       <span class="material-symbols-outlined"> call </span>Contact Us
     </button>
+
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">123 Tech Avenue</div>
+            <div class="text-two">City, Country</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+123-456-7890</div>
+            <div class="text-two">+123-456-7890</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">info@itech.com</div>
+            <div class="text-two">info@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <p>
+            Let's know if you have any message. We will get in touch with you in
+            24 hr.
+          </p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email" />
+            </div>
+            <div class="input-box message-box"></div>
+            <div class="button">
+              <input type="button" value="Send Now" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="row">
@@ -83,5 +130,13 @@
         <p>&copy; 2025 I-Tech. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
