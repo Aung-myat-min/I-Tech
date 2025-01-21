@@ -172,25 +172,32 @@ footer h4 {
 /* Mobile Styles for Navigation */
 @media screen and (max-width: 768px) {
   nav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
-    padding: 0.5rem;
+    grid-template-areas:
+      "logo toggle"
+      "links links";
+    padding: 0.5rem 6vw;
+    justify-content: center;
   }
 
   .menu-toggle {
     display: block;
+    margin-left: 50vw;
   }
 
   nav .links {
+    grid-column: span 2;
     display: none;
     flex-direction: column;
-    width: 100%;
+    align-items: center; /* Center the links vertically */
+    justify-content: center; /* Center the links horizontally */
+    width: 100vw;
   }
 
   nav .links a {
     padding: 10px;
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
@@ -301,6 +308,7 @@ footer h4 {
   padding: 2vh 7vw;
 
   > h3 {
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 2px 0 5px black;
@@ -850,13 +858,11 @@ footer h4 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.icon {
-  margin: auto;
-}
 .icon img {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
+  margin: auto;
 }
 
 .advantage-item h3 {
