@@ -888,3 +888,109 @@ footer h4 {
 }
 
 /* SERVICE END */
+
+/* PLAN PAGE START */
+/* Personalized Plans Section */
+#personalized-plans {
+  padding: 4vh 7vw;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#personalized-plans h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--footer-bg);
+}
+
+.plan-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.plan-card {
+  background-color: white;
+  border: 1px solid var(--boder-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--footer-bg);
+}
+
+.plan-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.plan-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+  color: #333;
+}
+
+.plan-card ul li .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.choose-plan {
+  background-color: var(--button-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choose-plan:hover {
+  background-color: var(--darker-button-color);
+}
+
+.custom-note {
+  background-color: var(--darker-button-color);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.custom-note p {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Mobile Styles for Personalized Plans Section */
+@media screen and (max-width: 768px) {
+  #personalized-plans {
+    padding: 2vh 2vw;
+  }
+
+  .plan-container {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    padding: 1.5rem;
+  }
+
+  .plan-card h3 {
+    font-size: 1.5rem;
+  }
+}
+/* PLAN PAGE END */
