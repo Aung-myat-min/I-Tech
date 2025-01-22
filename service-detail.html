@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Google Fonts -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Delius&family=Permanent+Marker&display=swap");
     </style>
-
     <!-- Google Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -22,31 +19,74 @@
       integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="style.css" />
     <title>Pro Print</title>
   </head>
   <body>
     <nav>
       <a class="icon" href="/">Pro Print</a>
-      <div class="links">
-        <a href="#" class="link here">Home</a>
-        <a href="#" class="link">Our Services</a>
-        <a href="#" class="link">Personalized Plans</a>
+      <div class="menu-toggle">
+        <span class="material-symbols-outlined">menu</span>
       </div>
-      <button id="contact-us">
-        <span class="material-symbols-outlined"> call </span>Contact Us
+      <div class="links">
+        <a href="/" class="link">Home</a>
+        <a href="./services.html" class="link here">Our Services</a>
+        <a href="./plans.html" class="link">Personalized Plans</a>
+      </div>
+      <button class="contact-us" id="contact-us">
+        <span class="material-symbols-outlined">call</span>Contact Us
       </button>
     </nav>
-    <button id="floating">
+    <button class="contact-us" id="floating">
       <span class="material-symbols-outlined"> call </span>Contact Us
     </button>
+
+    <!-- Business Card Logo Printing Section -->
+    <section id="business-card">
+      <h2>Business Card Logo Printing</h2>
+      <div class="business-card-container">
+        <!-- Image Placeholder -->
+        <img
+          src="./public/sample-log.webp"
+          alt="Sample Logo"
+          class="image-placeholder"
+        />
+        <div class="business-card-info">
+          <p class="description">
+            High-quality logo printing on premium business cards
+          </p>
+          <p class="price">$49.99</p>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined">check</span> Premium
+              350gsm cardstock
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check</span> Full color
+              CMYK printing
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check</span> Optional spot
+              UV coating
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check</span> Standard or
+              custom sizes available
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check</span> Quick
+              turnaround time
+            </li>
+          </ul>
+          <button class="order-now">Order Now</button>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="row">
         <!-- Logo or Brand Icon -->
         <a class="icon" href="/">Pro Print</a>
-
         <!-- Social Media Icons -->
         <div class="social-medias">
           <i class="bi bi-facebook"></i>
@@ -55,7 +95,6 @@
           <i class="bi bi-reddit"></i>
         </div>
       </div>
-
       <div class="footer-links">
         <!-- Quick Links -->
         <div class="links">
@@ -66,7 +105,6 @@
             <li><a href="#">Personalized Plans</a></li>
           </ul>
         </div>
-
         <!-- Contact Information -->
         <div class="contact-info">
           <h4>Contact Us</h4>
@@ -77,11 +115,18 @@
           </ul>
         </div>
       </div>
-
       <!-- Copyright Section -->
       <div class="copyright">
         <p>&copy; 2025 Pro Print. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
