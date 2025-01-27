@@ -118,9 +118,15 @@ footer {
       font-size: 1.2rem;
       color: white;
       cursor: pointer;
+
+      > a {
+        > i {
+          color: white;
+        }
+      }
     }
 
-    > .social-medias i:hover {
+    > .social-medias a:hover i {
       color: gray;
     }
   }
